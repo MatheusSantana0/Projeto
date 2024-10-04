@@ -1,0 +1,46 @@
+[0.558s] Invoking command in '/home/matheus/Documents/Projeto/ros2_ws/src/go2_main': PYTHONPATH=/home/matheus/Documents/Projeto/ros2_ws/build/go2_main/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/matheus/Documents/Projeto/ros2_ws/install/go2_main/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/go2_main build --build-base /home/matheus/Documents/Projeto/ros2_ws/build/go2_main/build install --record /home/matheus/Documents/Projeto/ros2_ws/build/go2_main/install.log --single-version-externally-managed install_data
+[0.761s] running egg_info
+[0.766s] creating ../../build/go2_main/go2_main.egg-info
+[0.766s] writing ../../build/go2_main/go2_main.egg-info/PKG-INFO
+[0.766s] writing dependency_links to ../../build/go2_main/go2_main.egg-info/dependency_links.txt
+[0.767s] writing entry points to ../../build/go2_main/go2_main.egg-info/entry_points.txt
+[0.767s] writing requirements to ../../build/go2_main/go2_main.egg-info/requires.txt
+[0.767s] writing top-level names to ../../build/go2_main/go2_main.egg-info/top_level.txt
+[0.767s] writing manifest file '../../build/go2_main/go2_main.egg-info/SOURCES.txt'
+[0.767s] reading manifest file '../../build/go2_main/go2_main.egg-info/SOURCES.txt'
+[0.767s] writing manifest file '../../build/go2_main/go2_main.egg-info/SOURCES.txt'
+[0.767s] running build
+[0.767s] running build_py
+[0.767s] creating /home/matheus/Documents/Projeto/ros2_ws/build/go2_main/build
+[0.767s] creating /home/matheus/Documents/Projeto/ros2_ws/build/go2_main/build/lib
+[0.767s] creating /home/matheus/Documents/Projeto/ros2_ws/build/go2_main/build/lib/go2_main
+[0.767s] copying go2_main/__init__.py -> /home/matheus/Documents/Projeto/ros2_ws/build/go2_main/build/lib/go2_main
+[0.767s] copying go2_main/valores_juntas.py -> /home/matheus/Documents/Projeto/ros2_ws/build/go2_main/build/lib/go2_main
+[0.767s] copying go2_main/broadcast_tf.py -> /home/matheus/Documents/Projeto/ros2_ws/build/go2_main/build/lib/go2_main
+[0.768s] copying go2_main/calculos.py -> /home/matheus/Documents/Projeto/ros2_ws/build/go2_main/build/lib/go2_main
+[0.768s] running install
+[0.768s] running install_lib
+[0.768s] creating /home/matheus/Documents/Projeto/ros2_ws/install/go2_main/lib/python3.10/site-packages/go2_main
+[0.768s] copying /home/matheus/Documents/Projeto/ros2_ws/build/go2_main/build/lib/go2_main/__init__.py -> /home/matheus/Documents/Projeto/ros2_ws/install/go2_main/lib/python3.10/site-packages/go2_main
+[0.768s] copying /home/matheus/Documents/Projeto/ros2_ws/build/go2_main/build/lib/go2_main/valores_juntas.py -> /home/matheus/Documents/Projeto/ros2_ws/install/go2_main/lib/python3.10/site-packages/go2_main
+[0.768s] copying /home/matheus/Documents/Projeto/ros2_ws/build/go2_main/build/lib/go2_main/broadcast_tf.py -> /home/matheus/Documents/Projeto/ros2_ws/install/go2_main/lib/python3.10/site-packages/go2_main
+[0.768s] copying /home/matheus/Documents/Projeto/ros2_ws/build/go2_main/build/lib/go2_main/calculos.py -> /home/matheus/Documents/Projeto/ros2_ws/install/go2_main/lib/python3.10/site-packages/go2_main
+[0.769s] byte-compiling /home/matheus/Documents/Projeto/ros2_ws/install/go2_main/lib/python3.10/site-packages/go2_main/__init__.py to __init__.cpython-310.pyc
+[0.769s] byte-compiling /home/matheus/Documents/Projeto/ros2_ws/install/go2_main/lib/python3.10/site-packages/go2_main/valores_juntas.py to valores_juntas.cpython-310.pyc
+[0.769s] byte-compiling /home/matheus/Documents/Projeto/ros2_ws/install/go2_main/lib/python3.10/site-packages/go2_main/broadcast_tf.py to broadcast_tf.cpython-310.pyc
+[0.769s] byte-compiling /home/matheus/Documents/Projeto/ros2_ws/install/go2_main/lib/python3.10/site-packages/go2_main/calculos.py to calculos.cpython-310.pyc
+[0.769s] running install_data
+[0.769s] creating /home/matheus/Documents/Projeto/ros2_ws/install/go2_main/share/ament_index
+[0.769s] creating /home/matheus/Documents/Projeto/ros2_ws/install/go2_main/share/ament_index/resource_index
+[0.769s] creating /home/matheus/Documents/Projeto/ros2_ws/install/go2_main/share/ament_index/resource_index/packages
+[0.769s] copying resource/go2_main -> /home/matheus/Documents/Projeto/ros2_ws/install/go2_main/share/ament_index/resource_index/packages
+[0.769s] copying package.xml -> /home/matheus/Documents/Projeto/ros2_ws/install/go2_main/share/go2_main
+[0.769s] creating /home/matheus/Documents/Projeto/ros2_ws/install/go2_main/share/go2_main/launch
+[0.769s] copying launch/robot_go2.launch.py -> /home/matheus/Documents/Projeto/ros2_ws/install/go2_main/share/go2_main/launch
+[0.769s] running install_egg_info
+[0.772s] Copying ../../build/go2_main/go2_main.egg-info to /home/matheus/Documents/Projeto/ros2_ws/install/go2_main/lib/python3.10/site-packages/go2_main-0.0.0-py3.10.egg-info
+[0.772s] running install_scripts
+[0.787s] Installing broadcast_tf script to /home/matheus/Documents/Projeto/ros2_ws/install/go2_main/lib/go2_main
+[0.787s] Installing valores_juntas script to /home/matheus/Documents/Projeto/ros2_ws/install/go2_main/lib/go2_main
+[0.787s] writing list of installed files to '/home/matheus/Documents/Projeto/ros2_ws/build/go2_main/install.log'
+[0.806s] Invoked command in '/home/matheus/Documents/Projeto/ros2_ws/src/go2_main' returned '0': PYTHONPATH=/home/matheus/Documents/Projeto/ros2_ws/build/go2_main/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/matheus/Documents/Projeto/ros2_ws/install/go2_main/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/go2_main build --build-base /home/matheus/Documents/Projeto/ros2_ws/build/go2_main/build install --record /home/matheus/Documents/Projeto/ros2_ws/build/go2_main/install.log --single-version-externally-managed install_data
