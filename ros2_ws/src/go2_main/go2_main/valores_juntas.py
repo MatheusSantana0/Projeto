@@ -1,4 +1,3 @@
-import time
 import rclpy
 from rclpy.node import Node
 from unitree_go.msg import SportModeState
@@ -52,7 +51,7 @@ class ValoresJuntas(Node):
     
     def timer_callback(self):
         """
-        Função destinada a montar a mensagem do tipo JointState e publicá-la no tóico correspondente.
+        Função destinada a montar a mensagem do tipo JointState e publicá-la no tópico correspondente.
         """
         msg = JointState()
         msg.header.stamp = self.get_clock().now().to_msg()

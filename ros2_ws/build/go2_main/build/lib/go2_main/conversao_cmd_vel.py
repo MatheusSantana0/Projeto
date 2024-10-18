@@ -1,62 +1,45 @@
-import time
 import rclpy
 from rclpy.node import Node
 from geometry_msgs.msg import Twist
-
 from unitree_api.msg import Request
-from sensor_msgs.msg import JointState
-from std_msgs.msg import Header
-from rclpy.qos import QoSProfile, ReliabilityPolicy
-
-
+from rclpy.qos import QoSProfile
 
 class ConversaoCmdVel(Node):
-    """Classe responsável pela tradução de comandos de velocidade. Leitura dos comandos de velocidade fornecidos pelo pacote nav2 através do tópico cmd_vel, e 
-    consequente publicação desses dados no formato lido pelo tópico /api/sport/request próprio do Go2 """
+    """Classe responsável pela tradução de comandos de velocidade. Leitura dos comandos de velocidade fornecidos 
+    pelo pacote nav2 através do tópico cmd_vel, e consequente publicação desses dados no formato lido pelo tópico
+    /api/sport/request próprio do Go2"""
 
     def __init__(self):
         super().__init__("conversao_cmd_vel")
 
-        self.linear_x = 0.0
-        self.linear_y = 0.0
-        self.angular_z = 0.0
-
         self.subscriber = self.create_subscription(
-            Twist,
-            "/cmd_vel",
-            self.listener_callback,
-            QoSProfile(depth=10)
+            Twist,                          # tipo da mensagem
+            "/cmd_vel",                     # tópico
+            self.listener_callback,         # callback
+            QoSProfile(depth=10)            # qos profile
         )
 
-        self.publisher = self.create_publisher(Request, "/api/sport/request",10)
-        self.timer = self.create_timer(0.05, self.timer_callback) #Publicação de dados a uma frequência de 20 hz
+        self.publisher = self.create_publisher(
+            Request,                        # tipo da mensagem
+            "/api/sport/request",           # tópico
+            10)                             # qos profile
 
     def listener_callback(self, msg):
         """
-        Função destinada a leitura dos pontos recebidos (x, y e z de cada uma das patas) e associação a variável correspondente
+        Função destinada a leitura e envio dos comandos de velocidade. 
         
         Args:
-            SportModeState: mensagem com pontos
-        """
-        
-        self.linear_x = msg.linear.x
-        self.linear_y = msg.linear.y
-        self.angular_z = msg.angular.z
-    
-    def timer_callback(self):
-        """
-        Função destinada a montar a mensagem do tipo JointState e publicá-la no tóico correspondente.
+            msg: mensagem proveniente do tópico cmd_vel no formato Twist
         """
 
-        msg = Request()
-        msg.header.identity.id = 18
-        msg.header.identity.api_id = 1008
+        msg_pub = Request()
+        msg_pub.header.identity.id = 19             # Aparentemente número aleatório
+        msg_pub.header.identity.api_id = 1008       # const int32_t ROBOT_SPORT_API_ID_MOVE = 1008;
 
-        if self.linear_x > 0.0 or self.linear_y > 0.0 or self.angular_z != 0.0:
-            msg.parameter = "{\"x\": " + str(self.linear_x) + ", \"y\": " + str(self.linear_y) + ", \"z\": " + str(self.angular_z) + "}"
+        msg_pub.parameter = "{\"x\": " + str(msg.linear.x) + ", \"y\": " + str(msg.linear.y) + ", \"z\": " + str(msg.angular.z) + "}"
         
-        self.publisher.publish(msg)
-    
+        self.publisher.publish(msg_pub)     
+
 def main(args=None):
     rclpy.init(args=args)
     conversao_cmd_vel = ConversaoCmdVel()

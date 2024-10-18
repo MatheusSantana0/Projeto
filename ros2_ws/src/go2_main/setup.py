@@ -26,7 +26,6 @@ setup(
         'console_scripts': [
             "broadcast_tf = go2_main.broadcast_tf:main",
             "valores_juntas = go2_main.valores_juntas:main",
-            "pointcloud_bridge = go2_main.pointcloud_bridge:main", 
             "conversao_cmd_vel = go2_main.conversao_cmd_vel:main" 
         ],
     },

@@ -1,6 +1,5 @@
 #! /usr/bin/env python3
 
-import sys
 import rclpy
 from rclpy.node import Node
 from rclpy.qos import ReliabilityPolicy, DurabilityPolicy, QoSProfile
@@ -10,6 +9,9 @@ from geometry_msgs.msg import PoseStamped
 
 
 class BroadcastTF(Node):
+    """Classe responsável pela publicação dos valores atuais de odometria como forma de atualizar a rede do TF,
+    ou seja, as relações entre os sietams de coordenadas existentes no robô. Dessa forma, permite visualizar o 
+    deslocamento do robô ao longo do rviz"""
 
     def __init__(self):
         super().__init__('broadcast_tf')
@@ -30,6 +32,12 @@ class BroadcastTF(Node):
         self.get_logger().info("Broadcaster TF inicializado!")
 
     def odom_callback(self, msg):
+        """
+        Função de callback, em que recebe os dados provenientes da odometria.
+        
+        Args:
+            msg: mensagem proveniente do tópico /utlidar/robot_pose no formato PoseStamped
+        """
 
         self.cam_bot_odom = msg
         self.broadcast_new_tf()
@@ -62,7 +70,6 @@ class BroadcastTF(Node):
 
 
 def main(args=None):
-
     rclpy.init()
     objeto_tf = BroadcastTF()
     rclpy.spin(objeto_tf)
