@@ -18,6 +18,12 @@
   <exec_depend>velodyne_laserscan</exec_depend>
   <exec_depend>slam_toolbox</exec_depend>
 
+  <exec_depend>navigation2</exec_depend>
+  <exec_depend>nav2_amcl</exec_depend>
+  <exec_depend>nav2_bringup</exec_depend>
+  <exec_depend>nav2_map_server</exec_depend>
+  <exec_depend>nav2_util</exec_depend>
+
 
 
   <test_depend>ament_copyright</test_depend>

@@ -20,6 +20,12 @@ def generate_launch_description():
         'mapper_params_online_async.yaml'
     )
 
+    nav2_param_file = os.path.join(
+        get_package_share_directory('go2_main'),
+        'config',
+        'nav2_params.yaml'
+    )
+
     #Caminho para o launch da descrição do robô, o qual ativa o robot_state_publisher e o rviz
     robot_description_launch = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
@@ -41,6 +47,19 @@ def generate_launch_description():
         }.items()
     )
 
+    pkg_navigation2_launch = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(
+            os.path.join(
+                get_package_share_directory(
+                'nav2_bringup'), 'launch', 'navigation_launch.py'
+            )
+        ),
+            launch_arguments={
+                'params_file': nav2_param_file,
+                'use_sim_time': 'false',
+            }.items()
+        )
+
     
     return LaunchDescription([
         robot_description_launch,
@@ -52,6 +71,11 @@ def generate_launch_description():
         Node(
             package="go2_main",
             executable="valores_juntas",
+            output="screen"
+        ),
+        Node(
+            package="go2_main",
+            executable="conversao_cmd_vel",
             output="screen"
         ),
         Node(
@@ -69,5 +93,6 @@ def generate_launch_description():
             }],
             output="screen",
         ),
-        pkg_slam_toolbox_launch
+        pkg_slam_toolbox_launch,
+        pkg_navigation2_launch
     ])

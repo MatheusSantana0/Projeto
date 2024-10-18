@@ -1,0 +1,76 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+-- Found urdf: 2.6.1 (/opt/ros/humble/share/urdf/cmake)
+-- Found xacro: 2.0.8 (/opt/ros/humble/share/xacro/cmake)
+-- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+-- Added test 'flake8' to check Python code syntax and style conventions
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/matheus/Documents/Projeto/ros2_ws/build/go2_description
+-- Install configuration: ""
+-- Installing: /home/matheus/Documents/Projeto/ros2_ws/install/go2_description/share/go2_description//dae
+-- Installing: /home/matheus/Documents/Projeto/ros2_ws/install/go2_description/share/go2_description//dae/thigh.dae
+-- Installing: /home/matheus/Documents/Projeto/ros2_ws/install/go2_description/share/go2_description//dae/calf.dae
+-- Installing: /home/matheus/Documents/Projeto/ros2_ws/install/go2_description/share/go2_description//dae/base.dae
+-- Installing: /home/matheus/Documents/Projeto/ros2_ws/install/go2_description/share/go2_description//dae/foot.dae
+-- Installing: /home/matheus/Documents/Projeto/ros2_ws/install/go2_description/share/go2_description//dae/calf_mirror.dae
+-- Installing: /home/matheus/Documents/Projeto/ros2_ws/install/go2_description/share/go2_description//dae/hip.dae
+-- Installing: /home/matheus/Documents/Projeto/ros2_ws/install/go2_description/share/go2_description//dae/thigh_mirror.dae
+-- Installing: /home/matheus/Documents/Projeto/ros2_ws/install/go2_description/share/go2_description//launch
+-- Installing: /home/matheus/Documents/Projeto/ros2_ws/install/go2_description/share/go2_description//launch/robot.launch.py
+-- Installing: /home/matheus/Documents/Projeto/ros2_ws/install/go2_description/share/go2_description//meshes
+-- Installing: /home/matheus/Documents/Projeto/ros2_ws/install/go2_description/share/go2_description//meshes/trunk.dae
+-- Installing: /home/matheus/Documents/Projeto/ros2_ws/install/go2_description/share/go2_description//meshes/thigh.dae
+-- Installing: /home/matheus/Documents/Projeto/ros2_ws/install/go2_description/share/go2_description//meshes/calf.dae
+-- Installing: /home/matheus/Documents/Projeto/ros2_ws/install/go2_description/share/go2_description//meshes/foot.dae
+-- Installing: /home/matheus/Documents/Projeto/ros2_ws/install/go2_description/share/go2_description//meshes/calf_mirror.dae
+-- Installing: /home/matheus/Documents/Projeto/ros2_ws/install/go2_description/share/go2_description//meshes/hip.dae
+-- Installing: /home/matheus/Documents/Projeto/ros2_ws/install/go2_description/share/go2_description//meshes/thigh_mirror.dae
+-- Installing: /home/matheus/Documents/Projeto/ros2_ws/install/go2_description/share/go2_description//rviz
+-- Installing: /home/matheus/Documents/Projeto/ros2_ws/install/go2_description/share/go2_description//rviz/go2_desc_v2.rviz
+-- Installing: /home/matheus/Documents/Projeto/ros2_ws/install/go2_description/share/go2_description//rviz/teste_tf.rviz
+-- Installing: /home/matheus/Documents/Projeto/ros2_ws/install/go2_description/share/go2_description//rviz/teste_robot_model.rviz
+-- Installing: /home/matheus/Documents/Projeto/ros2_ws/install/go2_description/share/go2_description//rviz/teste_map.rviz
+-- Installing: /home/matheus/Documents/Projeto/ros2_ws/install/go2_description/share/go2_description//rviz/go2_rviz_versao_2.rviz
+-- Installing: /home/matheus/Documents/Projeto/ros2_ws/install/go2_description/share/go2_description//rviz/v3_go2.rviz
+-- Installing: /home/matheus/Documents/Projeto/ros2_ws/install/go2_description/share/go2_description//rviz/go2_description.rviz
+-- Installing: /home/matheus/Documents/Projeto/ros2_ws/install/go2_description/share/go2_description//rviz/single_robot_conf.rviz
+-- Installing: /home/matheus/Documents/Projeto/ros2_ws/install/go2_description/share/go2_description//urdf
+-- Installing: /home/matheus/Documents/Projeto/ros2_ws/install/go2_description/share/go2_description//urdf/go2_description.urdf
+-- Installing: /home/matheus/Documents/Projeto/ros2_ws/install/go2_description/share/go2_description//xacro
+-- Installing: /home/matheus/Documents/Projeto/ros2_ws/install/go2_description/share/go2_description//xacro/leg.xacro
+-- Installing: /home/matheus/Documents/Projeto/ros2_ws/install/go2_description/share/go2_description//xacro/materials.xacro
+-- Installing: /home/matheus/Documents/Projeto/ros2_ws/install/go2_description/share/go2_description//xacro/transmission.xacro
+-- Installing: /home/matheus/Documents/Projeto/ros2_ws/install/go2_description/share/go2_description//xacro/robot.xacro
+-- Installing: /home/matheus/Documents/Projeto/ros2_ws/install/go2_description/share/go2_description//xacro/const.xacro
+-- Installing: /home/matheus/Documents/Projeto/ros2_ws/install/go2_description/share/go2_description//xacro/gazebo.xacro
+-- Installing: /home/matheus/Documents/Projeto/ros2_ws/install/go2_description/share/ament_index/resource_index/package_run_dependencies/go2_description
+-- Installing: /home/matheus/Documents/Projeto/ros2_ws/install/go2_description/share/ament_index/resource_index/parent_prefix_path/go2_description
+-- Installing: /home/matheus/Documents/Projeto/ros2_ws/install/go2_description/share/go2_description/environment/ament_prefix_path.sh
+-- Installing: /home/matheus/Documents/Projeto/ros2_ws/install/go2_description/share/go2_description/environment/ament_prefix_path.dsv
+-- Installing: /home/matheus/Documents/Projeto/ros2_ws/install/go2_description/share/go2_description/environment/path.sh
+-- Installing: /home/matheus/Documents/Projeto/ros2_ws/install/go2_description/share/go2_description/environment/path.dsv
+-- Installing: /home/matheus/Documents/Projeto/ros2_ws/install/go2_description/share/go2_description/local_setup.bash
+-- Installing: /home/matheus/Documents/Projeto/ros2_ws/install/go2_description/share/go2_description/local_setup.sh
+-- Installing: /home/matheus/Documents/Projeto/ros2_ws/install/go2_description/share/go2_description/local_setup.zsh
+-- Installing: /home/matheus/Documents/Projeto/ros2_ws/install/go2_description/share/go2_description/local_setup.dsv
+-- Installing: /home/matheus/Documents/Projeto/ros2_ws/install/go2_description/share/go2_description/package.dsv
+-- Installing: /home/matheus/Documents/Projeto/ros2_ws/install/go2_description/share/ament_index/resource_index/packages/go2_description
+-- Installing: /home/matheus/Documents/Projeto/ros2_ws/install/go2_description/share/go2_description/cmake/go2_descriptionConfig.cmake
+-- Installing: /home/matheus/Documents/Projeto/ros2_ws/install/go2_description/share/go2_description/cmake/go2_descriptionConfig-version.cmake
+-- Installing: /home/matheus/Documents/Projeto/ros2_ws/install/go2_description/share/go2_description/package.xml
