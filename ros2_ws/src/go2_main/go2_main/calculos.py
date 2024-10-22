@@ -1,7 +1,7 @@
 import math
 import numpy as np
 
-# URDF GO2 real values
+# URDF GO2 valores reais
 HIP_LENGTH = 0.0955
 THIGH_LENGTH = 0.213
 CALF_LENGTH = 0.2135

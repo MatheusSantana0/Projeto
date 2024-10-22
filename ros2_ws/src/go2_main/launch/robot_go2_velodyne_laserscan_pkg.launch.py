@@ -9,7 +9,8 @@ from launch.actions import IncludeLaunchDescription
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 
 ##### Descrição Launch: Esse launch possui a estrutura base do launch original, a diferença é que nesse foi utilizado
-##### o pacote do velodyne_laserscan para converter a pointcloud fornecida pelo Go2 para LaserScan
+##### o pacote do velodyne_laserscan para converter a pointcloud fornecida pelo Go2 para LaserScan (NÃO FUNCIONOU, pois o 
+##### pacote do velodyne_laserscan precisa de um parâmetro chamado "ring", sendo que o LiDAR do Go2 não fornece)
 
 def generate_launch_description():
     

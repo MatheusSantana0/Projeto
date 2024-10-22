@@ -8,6 +8,9 @@ from ament_index_python.packages import get_package_share_directory
 from launch.actions import IncludeLaunchDescription
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 
+##### Descrição Launch: Esse launch é o original, cujos dados do LiDAR são provenientes do Go2 e o processo
+##### de conversão do pointcloud para laserscan é através do pacote pointcloud_to_laserscan.
+
 def generate_launch_description():
     
     #Caminho do pacote da descrição do robô
@@ -18,6 +21,13 @@ def generate_launch_description():
         get_package_share_directory('go2_main'),
         'config',
         'mapper_params_online_async.yaml'
+    )
+
+    #Caminho para o arquivo de configuração contendo os parâmetros para o nav2
+    nav2_param_file = os.path.join(
+        get_package_share_directory('go2_main'),
+        'config',
+        'nav2_params.yaml'
     )
 
     #Caminho para o launch da descrição do robô, o qual ativa o robot_state_publisher e o rviz
@@ -41,6 +51,20 @@ def generate_launch_description():
         }.items()
     )
 
+    #Caminho para o launch do nav2, com a passagem de alguns parâmetros
+    pkg_navigation2_launch = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(
+            os.path.join(
+                get_package_share_directory(
+                'nav2_bringup'), 'launch', 'navigation_launch.py'
+            )
+        ),
+            launch_arguments={
+                'params_file': nav2_param_file,
+                'use_sim_time': 'false',
+            }.items()
+        )
+
     
     return LaunchDescription([
         robot_description_launch,
@@ -52,6 +76,11 @@ def generate_launch_description():
         Node(
             package="go2_main",
             executable="valores_juntas",
+            output="screen"
+        ),
+        Node(
+            package="go2_main",
+            executable="conversao_cmd_vel",
             output="screen"
         ),
         Node(
@@ -69,5 +98,6 @@ def generate_launch_description():
             }],
             output="screen",
         ),
-        pkg_slam_toolbox_launch
+        pkg_slam_toolbox_launch,
+        pkg_navigation2_launch
     ])

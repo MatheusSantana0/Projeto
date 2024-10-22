@@ -1,6 +1,5 @@
 #! /usr/bin/env python3
 
-import sys
 import rclpy
 from rclpy.node import Node
 from rclpy.qos import ReliabilityPolicy, DurabilityPolicy, QoSProfile
@@ -10,6 +9,9 @@ from geometry_msgs.msg import PoseStamped
 
 
 class BroadcastTF(Node):
+    """Classe responsável pela publicação dos valores atuais de odometria como forma de atualizar a rede do TF,
+    ou seja, as relações entre os sietams de coordenadas existentes no robô. Dessa forma, permite visualizar o 
+    deslocamento do robô ao longo do rviz"""
 
     def __init__(self):
         super().__init__('broadcast_tf')
@@ -21,7 +23,7 @@ class BroadcastTF(Node):
         self.subscriber = self.create_subscription(
             PoseStamped,
             '/utlidar/robot_pose',
-            self.odom_callback,
+            self.broadcast_new_tf,
             QoSProfile(depth=1, durability=DurabilityPolicy.VOLATILE, reliability=ReliabilityPolicy.BEST_EFFORT))
 
         # O objeto 'TransformBroadcaster' é um nó do ROS que publica mensagens TF
@@ -29,19 +31,15 @@ class BroadcastTF(Node):
 
         self.get_logger().info("Broadcaster TF inicializado!")
 
-    def odom_callback(self, msg):
-
-        self.cam_bot_odom = msg
-        self.broadcast_new_tf()
-
-    def broadcast_new_tf(self):
+    def broadcast_new_tf(self, msg):
         """
-        Esta função publica uma nova mensagem TF para toda a rede do TF.
+        Função de callback, em que recebe os dados provenientes da odometria 
+        e publica uma nova mensagem TF para toda a rede do TF.
         """
 
         # Captura dos valores atuais de odometria
-        position = self.cam_bot_odom.pose.position
-        orientation = self.cam_bot_odom.pose.orientation
+        position = msg.pose.position
+        orientation = msg.pose.orientation
 
         # Definição da hora atual no cabeçalho da mensagem TF
         self.transform_stamped.header.stamp = self.get_clock().now().to_msg()
@@ -62,10 +60,11 @@ class BroadcastTF(Node):
 
 
 def main(args=None):
-
-    rclpy.init()
+    rclpy.init(args=args)
     objeto_tf = BroadcastTF()
     rclpy.spin(objeto_tf)
+    objeto_tf.destroy_node()
+    rclpy.shutdown()
 
 if __name__ == '__main__':
     main()

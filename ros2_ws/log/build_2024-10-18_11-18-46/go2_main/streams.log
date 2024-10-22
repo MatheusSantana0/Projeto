@@ -1,0 +1,27 @@
+[0.498s] Invoking command in '/home/matheus/Documents/Projeto/ros2_ws/src/go2_main': PYTHONPATH=/home/matheus/Documents/Projeto/ros2_ws/build/go2_main/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/matheus/Documents/Projeto/ros2_ws/install/go2_main/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/go2_main build --build-base /home/matheus/Documents/Projeto/ros2_ws/build/go2_main/build install --record /home/matheus/Documents/Projeto/ros2_ws/build/go2_main/install.log --single-version-externally-managed install_data
+[0.690s] running egg_info
+[0.691s] writing ../../build/go2_main/go2_main.egg-info/PKG-INFO
+[0.691s] writing dependency_links to ../../build/go2_main/go2_main.egg-info/dependency_links.txt
+[0.691s] writing entry points to ../../build/go2_main/go2_main.egg-info/entry_points.txt
+[0.691s] writing requirements to ../../build/go2_main/go2_main.egg-info/requires.txt
+[0.691s] writing top-level names to ../../build/go2_main/go2_main.egg-info/top_level.txt
+[0.692s] reading manifest file '../../build/go2_main/go2_main.egg-info/SOURCES.txt'
+[0.693s] writing manifest file '../../build/go2_main/go2_main.egg-info/SOURCES.txt'
+[0.693s] running build
+[0.693s] running build_py
+[0.693s] copying go2_main/conversao_cmd_vel.py -> /home/matheus/Documents/Projeto/ros2_ws/build/go2_main/build/lib/go2_main
+[0.694s] running install
+[0.694s] running install_lib
+[0.694s] copying /home/matheus/Documents/Projeto/ros2_ws/build/go2_main/build/lib/go2_main/conversao_cmd_vel.py -> /home/matheus/Documents/Projeto/ros2_ws/install/go2_main/lib/python3.10/site-packages/go2_main
+[0.695s] byte-compiling /home/matheus/Documents/Projeto/ros2_ws/install/go2_main/lib/python3.10/site-packages/go2_main/conversao_cmd_vel.py to conversao_cmd_vel.cpython-310.pyc
+[0.695s] running install_data
+[0.695s] running install_egg_info
+[0.697s] removing '/home/matheus/Documents/Projeto/ros2_ws/install/go2_main/lib/python3.10/site-packages/go2_main-0.0.0-py3.10.egg-info' (and everything under it)
+[0.697s] Copying ../../build/go2_main/go2_main.egg-info to /home/matheus/Documents/Projeto/ros2_ws/install/go2_main/lib/python3.10/site-packages/go2_main-0.0.0-py3.10.egg-info
+[0.697s] running install_scripts
+[0.712s] Installing broadcast_tf script to /home/matheus/Documents/Projeto/ros2_ws/install/go2_main/lib/go2_main
+[0.712s] Installing conversao_cmd_vel script to /home/matheus/Documents/Projeto/ros2_ws/install/go2_main/lib/go2_main
+[0.712s] Installing pointcloud_bridge script to /home/matheus/Documents/Projeto/ros2_ws/install/go2_main/lib/go2_main
+[0.712s] Installing valores_juntas script to /home/matheus/Documents/Projeto/ros2_ws/install/go2_main/lib/go2_main
+[0.712s] writing list of installed files to '/home/matheus/Documents/Projeto/ros2_ws/build/go2_main/install.log'
+[0.728s] Invoked command in '/home/matheus/Documents/Projeto/ros2_ws/src/go2_main' returned '0': PYTHONPATH=/home/matheus/Documents/Projeto/ros2_ws/build/go2_main/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/matheus/Documents/Projeto/ros2_ws/install/go2_main/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/go2_main build --build-base /home/matheus/Documents/Projeto/ros2_ws/build/go2_main/build install --record /home/matheus/Documents/Projeto/ros2_ws/build/go2_main/install.log --single-version-externally-managed install_data
