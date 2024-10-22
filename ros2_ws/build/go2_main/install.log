@@ -1,16 +1,12 @@
 /home/matheus/Documents/Projeto/ros2_ws/install/go2_main/lib/python3.10/site-packages/go2_main/__init__.py
-/home/matheus/Documents/Projeto/ros2_ws/install/go2_main/lib/python3.10/site-packages/go2_main/cmd_vel_publisher.py
 /home/matheus/Documents/Projeto/ros2_ws/install/go2_main/lib/python3.10/site-packages/go2_main/valores_juntas.py
 /home/matheus/Documents/Projeto/ros2_ws/install/go2_main/lib/python3.10/site-packages/go2_main/broadcast_tf.py
 /home/matheus/Documents/Projeto/ros2_ws/install/go2_main/lib/python3.10/site-packages/go2_main/calculos.py
-/home/matheus/Documents/Projeto/ros2_ws/install/go2_main/lib/python3.10/site-packages/go2_main/pointcloud_bridge.py
 /home/matheus/Documents/Projeto/ros2_ws/install/go2_main/lib/python3.10/site-packages/go2_main/conversao_cmd_vel.py
 /home/matheus/Documents/Projeto/ros2_ws/install/go2_main/lib/python3.10/site-packages/go2_main/__pycache__/__init__.cpython-310.pyc
-/home/matheus/Documents/Projeto/ros2_ws/install/go2_main/lib/python3.10/site-packages/go2_main/__pycache__/cmd_vel_publisher.cpython-310.pyc
 /home/matheus/Documents/Projeto/ros2_ws/install/go2_main/lib/python3.10/site-packages/go2_main/__pycache__/valores_juntas.cpython-310.pyc
 /home/matheus/Documents/Projeto/ros2_ws/install/go2_main/lib/python3.10/site-packages/go2_main/__pycache__/broadcast_tf.cpython-310.pyc
 /home/matheus/Documents/Projeto/ros2_ws/install/go2_main/lib/python3.10/site-packages/go2_main/__pycache__/calculos.cpython-310.pyc
-/home/matheus/Documents/Projeto/ros2_ws/install/go2_main/lib/python3.10/site-packages/go2_main/__pycache__/pointcloud_bridge.cpython-310.pyc
 /home/matheus/Documents/Projeto/ros2_ws/install/go2_main/lib/python3.10/site-packages/go2_main/__pycache__/conversao_cmd_vel.cpython-310.pyc
 /home/matheus/Documents/Projeto/ros2_ws/install/go2_main/share/ament_index/resource_index/packages/go2_main
 /home/matheus/Documents/Projeto/ros2_ws/install/go2_main/share/go2_main/package.xml
@@ -29,5 +25,4 @@
 /home/matheus/Documents/Projeto/ros2_ws/install/go2_main/lib/python3.10/site-packages/go2_main-0.0.0-py3.10.egg-info/PKG-INFO
 /home/matheus/Documents/Projeto/ros2_ws/install/go2_main/lib/go2_main/broadcast_tf
 /home/matheus/Documents/Projeto/ros2_ws/install/go2_main/lib/go2_main/conversao_cmd_vel
-/home/matheus/Documents/Projeto/ros2_ws/install/go2_main/lib/go2_main/pointcloud_bridge
 /home/matheus/Documents/Projeto/ros2_ws/install/go2_main/lib/go2_main/valores_juntas
